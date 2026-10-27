@@ -1,0 +1,205 @@
+
+/* Main container */
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin: 0 0 10px;
+}
+
+header p {
+  margin: 0;
+  color: #e0e7ff;
+}
+
+/* Main layout */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+/* White sections */
+.form-section,
+.contacts-section {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  min-width: 0;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 0 0 20px;
+  color: #1e293b;
+}
+
+/* Form and search inputs */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #1e293b;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Add Contact button */
+form button {
+  width: 100%;
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #1d4ed8;
+}
+
+/* Search */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  margin-bottom: 0;
+}
+
+/* Contact cards */
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.contact-info {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-info h3 {
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+/* Delete button */
+.delete-btn {
+  padding: 10px 15px;
+  background: #fee2e2;
+  color: #991b1b;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+/* Keyboard accessibility */
+button:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+/* Empty state and errors */
+.empty-message {
+  text-align: center;
+  color: #64748b;
+  padding: 25px 10px;
+}
+
+.error {
+  color: #b91c1c;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 35px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .app-container {
+    padding: 20px 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 25px;
+  }
+
+  .form-section,
+  .contacts-section {
+    padding: 18px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
